@@ -1,0 +1,49 @@
+#Project: Sal's Shipping
+
+premium_ground_shipping = 125
+
+#Ground shipping function
+def cost_of_g_sh(weight):
+    if (weight <= 2):
+        cost = weight * 1.5 + 20
+        return cost
+    elif (weight > 2 ) and (weight <= 6):
+        cost = weight * 3 + 20
+        return cost
+    elif (weight > 6 ) and (weight <= 10):
+        cost = weight * 4 + 20
+        return  cost
+    else:
+        cost = weight * 4.75 + 20
+        return cost
+
+#Drone shipping function
+def cost_of_d_sh(weight):
+    if (weight <= 2):
+        cost = weight * 4.5 + 0
+        return cost
+    elif (weight > 2 ) and (weight <= 6):
+        cost = weight * 9 + 0
+        return cost
+    elif (weight > 6 ) and (weight <= 10):
+        cost = weight * 12 + 0
+        return  cost
+    else:
+        cost = weight * 14.25 + 0
+        return cost
+
+#The last function, Ground vs Drone vs Premium
+def tercera_funcion(weight):
+    cost_ground = cost_of_g_sh(weight)
+    cost_drone = cost_of_d_sh(weight)
+    if (cost_ground<cost_drone) and (cost_ground<premium_ground_shipping):
+        print ("You should ship using ground shipping, it will cost $"
+        + str(cost_ground))
+    elif (cost_drone<cost_ground) and (cost_drone<premium_ground_shipping):
+        print ("You should ship using drone shipping, it will cost $"
+        + str(cost_drone))
+    else:
+        print("You should ship using premium ground shipping, it will cost $"
+        + str(premium_ground_shipping))
+
+tercera_funcion(100)

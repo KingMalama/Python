@@ -1,0 +1,13 @@
+# Write your tenth_power function here:
+def tenth_power(num):
+  power = num**10
+  return power
+#print(tenth_power(1))
+# 1 to the 10th power is 1
+print(tenth_power(1))
+#print(tenth_power(0))
+# 0 to the 10th power is 0
+print(tenth_power(0))
+#print(tenth_power(2))
+# 2 to the 10th power is 1024
+print(tenth_power(2))

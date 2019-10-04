@@ -1,0 +1,29 @@
+#Antoher Examples of List Comprehension in Python
+#Create a new list named double_nums by multiplying
+#each number in nums by two.
+
+nums = [4, 8, 15, 16, 23, 42]
+double_nums = [num * 2 for num in nums]
+print(double_nums)
+
+#reate a new list named squares that contains
+#the square of every number in this list.
+
+nums = range(11)
+squares = [numbers ** 2 for numbers in nums]
+print(squares)
+
+#When using list comprehension, sometimes the items in the list
+#that you’re iterating through will be lists themselves! In these cases, you
+#can access multiple items in those sub-lists by using the following syntax
+
+original_list = [[1, 2], [3, 4],  [5, 6]] #Two lists
+new_list = [item1 + item2 for (item1, item2) in original_list]
+print(new_list)
+
+#Create a new list named product that contains the product of
+#each sub-list of nested_lists.
+
+nested_lists = [[4, 8], [15, 16], [23, 42]]
+product = [item1 * item2 for (item1, item2) in nested_lists]
+print(product)

@@ -1,0 +1,27 @@
+#Time for re-call python babe!
+#Loops that let us move through each item in a list, called for loops
+#Loops that keep going until we tell them to stop, called while loops
+#Loops that create new lists, called list comprehensions
+
+dog_breeds = ['french_bulldog', 'dalmatian', 'shihtzu', 'poodle', 'collie']
+
+for example in dog_breeds:
+    print(example)
+
+#A for loop lets us perform an action on each item in a list.
+#Using each element of a list is known as iterating.
+#Range function
+
+for i in range(3):
+    print("Warning")
+
+#Infinite loop
+students_period_A = ["Alex", "Briana", "Cheri", "Daniele"]
+students_period_B = ["Dora", "Minerva", "Alexa", "Obie"]
+
+for student in students_period_B:
+  students_period_A.append(student)
+  #students_period_B.append(student)
+  print(student)
+
+  #We often want to use a for loop to search through a list for some value

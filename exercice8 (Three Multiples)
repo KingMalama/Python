@@ -1,0 +1,6 @@
+#Write your first
+def first_three_multiples(num):
+    for x in range(1, 4):
+        print(num * x)
+    return num*3
+first_three_multiples(5)

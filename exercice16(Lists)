@@ -1,0 +1,76 @@
+#Zip
+names = ['Jenny', 'Alexus', 'Sam', 'Grace']
+heights = [61, 70, 67, 65]
+names_and_heights = zip(names, heights)
+print(list(names_and_heights))
+
+
+##This a cycle example
+#from itertools import cycle
+#list1 = ['Joe', 'Mark', 'Rebecca']
+#list2 = [12, 23, 34, 34, 56, 56]
+#merged= zip(cycle(list1), (list2))
+#print(list(merged))
+
+#This an example for add new values for our list.
+empty_list = []
+
+empty_list.append(1)
+print(empty_list)
+
+#When we want to add multiple items to a list, we can use + to combine two lists.
+items_sold = ['cake', 'cookie', 'bread']
+items_sold_new = items_sold + ['biscuit', 'tart']
+print(items_sold_new)
+
+#Plus +
+broken_prices = [5, 3, 4, 5, 4] + [4]
+print(broken_prices)
+
+#Range
+#Example 1 0-8
+list1 = range(9)
+print (list(list1))
+
+#Example 2 5-10
+list2 = range(5, 11)
+print(list(list2))
+
+#Example 3 skip numbers 0-5-10
+list3 = range(0, 11, 5)
+print(list(list3))
+print("Maybeee")
+
+#Call a value from a list
+employees = ['Michael', 'Dwight', 'Jim', 'Pam', 'Ryan', 'Andy', 'Robert']
+
+index4 = employees[4]
+
+# Print the lenght of the list
+print(len(employees))
+
+#Print the index 0 of the list, in this case.. Michael
+print(employees[0])
+
+#Slice the list, starts in 2 and ends in 6. Employees[start:end]
+print(employees[2:6])
+
+#Slice the list, starts in 2 and ends in the end of the list.
+print(employees[2:])
+
+#Slice the list, starts in 0 and ends in 5.
+print(employees[:5])
+
+#Select the last item of the list
+print(employees[-1])
+
+#Select the last 3 elements of employees
+print(employees[-3:])
+
+#Sort the elements
+employees.sort()
+print(employees)
+
+#Sorted, another way for sort a list.
+employees_sort = sorted(employees)
+print(employees_sort)

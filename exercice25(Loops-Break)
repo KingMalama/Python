@@ -1,0 +1,26 @@
+#We often want to use a for loop to search through a list for some value
+
+items_on_sale = ["blue_shirt", "striped_socks",
+"knit_dress", "red_headband", "dinosaur_onesie"]
+
+# we want to check if the item with ID "knit_dress" is on sale:
+for item in items_on_sale:
+  if item == "knit_dress":
+    print("Knit Dress is on sale!")
+
+#But what if items_on_sale had 1000 items after "knit_dress"?
+#What if it had 100,000 items after "knit_dress"?
+#You can stop a for loop from inside the loop by using break.
+#When the program hits a break statement, control returns to the code
+#outside of the for loop. For example
+print("---------------------------")
+
+items_on_sale = ["blue_shirt", "striped_socks",
+"knit_dress", "red_headband", "dinosaur_onesie"]
+
+print("Checking the sale list!")
+for item in items_on_sale:
+  print(item)
+  if item == "knit_dress":
+    break
+print("End of search!")

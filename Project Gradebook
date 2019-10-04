@@ -1,0 +1,18 @@
+#Project Gradebook
+last_semester_gradebook = [("politics", 80), ("latin", 96),
+ ("dance", 97), ("architecture", 65)]
+
+#Point 1
+subjects = ["physics", "calculus", "poetry", "history"]
+#Point 2 & 5
+grades = [98, 97, 85, 88]
+subjects.append("computer science")
+grades.append(100)
+
+#Point 3, 4, 6
+gradebook = zip(subjects, grades)
+subjects.append("visual arts")
+grades.append(93)
+
+full_gradebook = last_semester_gradebook + list(gradebook)
+print(full_gradebook)

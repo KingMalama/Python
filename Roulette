@@ -1,0 +1,39 @@
+#The roulette Game!
+import random
+
+money = 100
+
+def roulette(guess,bet):
+    if bet <= 0:
+      print("--------------------------")
+      print("Your bet is above 0!")
+      print("--------------------------")
+      return 0
+
+    # Prints the result of the Cho-Han game.
+    print("--------------------------")
+    print("Let's spin the roulette!!!")
+    print("--------------------------")
+    print("Your choose: "+str(guess))
+    result = random.randint(0,3)
+    print("The result of the rulette is: "+str(result))
+    bigp = bet*35
+    even_or_odd = result%2
+
+    # Prints the result of the roulette.
+    if result == guess:
+        print("You are the fucking king! You won $" + str(bigp)+" dolars!!!")
+        return bigp
+    elif (result == 0) and (guess=="Even" or guess== "Odd"):
+        print("We have a: " + str(result))
+        print("You lose!")
+    else:
+        print("Coin result: ")
+        print("Tails")
+
+#Call the roulette
+
+money += roulette(2,100)
+print("---------------------------------")
+print("Your total money is $" + str(money)+ " dolars.")
+print("---------------------------------")

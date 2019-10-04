@@ -1,0 +1,101 @@
+#Games of Chance
+import random
+
+money = 100
+
+#Function of the Coin Game
+def coin_flip(guess,bet):
+    #You need bet something... right?
+    if bet <= 0:
+        print("----------------------")
+        print("Your bet is above 0!")
+        print("----------------------")
+        return 0
+
+    # Let´s start the game
+    print("------------------------------------------")
+    print("Let's flip the coin!! You guessed " + str(guess))
+    print("------------------------------------------")
+    result = random.randint(1,2)
+
+    # Prints the result of the coin flip. A 1 is heads, a 2 is tails
+    if result == 1:
+        print("Coin result: ")
+        print("Heads!")
+    elif result == 2:
+        print("Coin result: ")
+        print("Tails")
+
+   # Determines if you won or lost and returns either bet or -bet
+    if (guess == "Heads" and result == 1) or (guess == "Tails" and result == 2):
+        print("You won $" + str(bet) + " dolars!")
+        return bet
+    else:
+        print("You lose $"+str(bet)+ " dolars")
+        return -bet
+
+#Function of the Cho-Han
+def cho_han(guess,bet):
+    if bet <= 0:
+      print("--------------------------")
+      print("Your bet is above 0!")
+      print("--------------------------")
+      return 0
+
+    # Prints the result of the Cho-Han game.
+    print("--------------------------")
+    print("Chon-Han! Wuayaaa!")
+    print("--------------------------")
+    print("Your choose is: "+str(guess))
+    dice1 = random.randint(1,6)
+    dice2 = random.randint(1,6)
+    sum = dice1 + dice2
+    print("The result of the first dice is: " + str(dice1))
+    print("The result of the second dice is: " + str(dice2))
+    print("The sum of the dices are: "+str(sum))
+    result = sum%2
+
+    # Determines if you won or lost and returns either bet or -bet
+    if(guess == "Even" and result == 0) or (guess == "Odd" and result == 1):
+        print("Ding-dong! You won "+str(bet)+" dolars!")
+        return bet
+    else:
+        print("You lose! Try again")
+        return -bet
+
+#Function of the Card Game
+def card_game(bet):
+    #You need bet something... right?
+    if bet <= 0:
+      print("--------------------------")
+      print("Your bet is above 0!")
+      print("--------------------------")
+      return 0
+
+    # Prints the result of the card game.
+    print("--------------------------")
+    print("Let's play a cards game!")
+    print("--------------------------")
+    mine = random.randint(1,10)
+    your = random.randint(1,10)
+    print("You draw a: " + str(mine))
+    print("The opponent draws : "+str(your))
+
+    # Determines if you won or lost and returns either bet or -bet
+    if (mine > your):
+        print("You won $" + str(bet) + " dolars!")
+        return bet
+    elif (mine < your):
+        print("You lose $" + str(bet) + " dolars, your opponent won")
+        return -bet
+    else:
+        print("Tie!")
+        return 0
+
+#Summon the functions
+money += coin_flip("Heads",150)
+money += cho_han("Odd",100)
+money += card_game(10)
+print("---------------------------------")
+print("Your total money is " + str(money))
+print("---------------------------------")
